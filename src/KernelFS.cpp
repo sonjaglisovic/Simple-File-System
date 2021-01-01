@@ -527,8 +527,6 @@ char KernelFS:: brisi(char* fname) {
 int KernelFS::nadjiBlok() {
 	int c = part->getNumOfClusters() / 8 + (part->getNumOfClusters() % 8 ? 1 : 0);
 	for (int i = 0; i < c; i++) {
-		//if (i == 1874)
-			//cout << "SRANJEEE" << endl;
 		unsigned int c1 = (unsigned int)bitVektor[c - 1];
 		if (bitVektor[i] != 255) {
 			unsigned char temp = 128;
